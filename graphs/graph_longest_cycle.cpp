@@ -16,6 +16,7 @@ public:
             if(!v.count(i) && cycle(v, bv, g, d, i, dis + 1, max_dis))return true;
             else if(bv.count(i)){
                 max_dis = max(max_dis, dis + 1 - d[i]);
+                bv.erase(i);
                 return true;
             }
         }
